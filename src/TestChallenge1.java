@@ -7,32 +7,14 @@ import org.asl.karelx.Squarebot;
 public class TestChallenge1 {
 	
 	public static void main(String[] args) {
-		 Display.openWorld();
 		 Display.setSize(10, 10);
-		 Uberbot jordan = new Squarebot(9, 3, Display.NORTH, INFINITY);
-       Uberbot lisa = new Sentry (9, 3);
 		 
-       jordan.putBeeper();
-       jordan.move(5);
-       jordan.putBeeper();
-       jordan.turnLeft();
+       Uberbot jordan = new Squarebot(9, 3, Display.NORTH, INFINITY);
+       Uberbot lisa = new Sentry (4, 4);
        
-       jordan.putBeeper();
-       jordan.move(5);
-       jordan.putBeeper();
-       jordan.turnLeft();
-       
-       jordan.putBeeper();
-       jordan.move(5);
-       jordan.putBeeper();
-       jordan.turnLeft();
-       
-       jordan.putBeeper();
-       jordan.move(5);
-       jordan.putBeeper();
-       jordan.turnLeft();
-       
+       jordan.layCorners(5);
        lisa.patrol();
+		 
 	}
 
 }
